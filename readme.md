@@ -56,7 +56,7 @@ async function renderHtml() {
 }
 ```
 
-This is caused by the `publicPath: '/assets/'` setting in `build.js`. Remove this setting and re-run `$ pnpm run reprod` to get:
+This is caused by [the `publicPath: '/assets/'` setting in `build.js`](https://github.com/brillout/esbuild-reprod-2707/blob/main/build.js#L7). Remove this setting and re-run `$ pnpm run reprod` to get:
 
 ```html
 <!DOCTYPE html>
