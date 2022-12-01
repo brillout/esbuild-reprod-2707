@@ -4,13 +4,13 @@ build()
 
 function build() {
   return esbuild.build({
+    publicPath: '/assets/', // Remove this line to fix error
     entryPoints: ['./src/renderHtml.js'],
+    outdir: './dist/',
     format: 'esm',
     target: 'es2020',
-    publicPath: '/assets/',
-    splitting: true,
-    outdir: './dist/',
     bundle: true,
+    splitting: true,
     loader: {
       '.svg': 'file'
     }
